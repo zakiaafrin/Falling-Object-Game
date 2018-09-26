@@ -70,7 +70,7 @@ var runGame = setInterval(function(){
               }, 5000);
 
 function countdown() {
-    	var seconds = 21;
+    	var seconds = 20;
 	    function tick() {
 	        var counter = document.getElementById("counter");
 	        seconds--;
