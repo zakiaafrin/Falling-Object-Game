@@ -7,7 +7,25 @@
   position: relative;
   overflow: hidden;
 }
+.submit {
+  width: 90px;
+  height: 35px;
+  border-radius: 20%;
+  background-color: #022a39;
+  font-size: 17px;
+  font-weight: bold;
+  color: white;
+}
 
+#initials{
+  display: inline-block;
+  border-radius: 20%; 
+  height: 40px;  
+  background-color: #022a39;
+  color: white;
+  font-size: 15px;
+  font-weight: bold; 
+}
 .score {
   font-size: 500px;
   z-index: 20;
@@ -17,7 +35,16 @@
   width: 100%;
   text-align: center;
 }
-
+.scoreBoard{
+  margin-left: 10px;
+  background-color: #022a39;
+  font-size: 17px;
+  display: inline;
+  
+}
+#scoreBoard{
+  color:white;
+}
 .box {
   width: 100px;
   height: 70px;
@@ -37,7 +64,7 @@
   border-radius: 20%;
   background-color: #ff6969ba;
   width: 8%;
-  margin: 0 auto;
+  margin-left: 325px;
   text-align: center;
   font-family: arial;
   color: #0f0205;

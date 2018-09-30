@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,14 +8,32 @@
     <link rel="stylesheet" href="./css/style.css">
     <title>Falling Object Game</title>
 </head>
+
 <body>
+
     <div class="game">
-    <div class="counter" id= "counter">00s</div>
-    <div class="score">
-      00
+        <div style="display: flex;">
+            <div>
+                <input type="text" placeholder="Enter your name here" id="initials">
+                <button class="submit" id="submit">Submit</button>
+            </div>
+            <div class="counter" id="counter">00s</div>
+            <div class="scoreBoard">
+                <p>
+                    <ol id="scoreBoard"></ol>
+                </p>
+            </div>
+        </div>
+        <div class="score" id="score">
+            00
+        </div>
     </div>
-  </div>
-      <script src="./js/jQuery.js"></script>
-      <script src="./js/main.js"></script>
+
+    <script src="./js/firebase.js"></script>
+    <script src="./js/index.js"></script>
+    <script src="./js/jQuery.js"></script>
+    <script src="./js/main.js"></script>
+
 </body>
+
 </html>
