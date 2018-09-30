@@ -10,25 +10,26 @@
 </head>
 
 <body>
+    <div style="display: flex;">
+        <div class="game">
+            <div style="display: flex;">
+                <div>
+                    <input type="text" placeholder="Enter your name here" id="initials">
+                    <button class="submit" id="submit">Submit</button>
+                </div>
+                <div class="counter" id="counter">00s</div>
 
-    <div class="game">
-        <div style="display: flex;">
-            <div>
-                <input type="text" placeholder="Enter your name here" id="initials">
-                <button class="submit" id="submit">Submit</button>
             </div>
-            <div class="counter" id="counter">00s</div>
-            <div class="scoreBoard">
-                <p>
-                    <ol id="scoreBoard"></ol>
-                </p>
+            <div class="score" id="score">
+                00
             </div>
         </div>
-        <div class="score" id="score">
-            00
+        <div class="scoreBoard">
+            <p>
+                <ol id="scoreBoard">Score Board</ol>
+            </p>
         </div>
     </div>
-
     <script src="./js/firebase.js"></script>
     <script src="./js/index.js"></script>
     <script src="./js/jQuery.js"></script>
