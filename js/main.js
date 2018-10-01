@@ -2,7 +2,6 @@ let score = 0;
 let color = "blue";
 let initialInput = document.querySelector('#initials');
 let submitButton = document.querySelector('#submit');
-let ScoreBoard = document.querySelector('#scoreBoard');
 let database;
 
 function random(min, max) {
@@ -61,25 +60,30 @@ ref.on('value', gotData, errData);
 
 function gotData(data) {
 
-  // let scoreLists = document.createElement('.scoreList');
-  // for (let i =0; i< scoreLists.length; i++){
-  //   scoreLists[i].remove();
-  // }
+  let scoreLists = document.querySelectorAll('.scoreList');
+  for (let i =0; i< scoreLists.length; i++){
+    scoreLists[i].remove();
+  }
 
   console.log(data.val());
 
   const scores = data.val();
   const keys = Object.keys(scores);
-   console.log(keys);
+  const olList = document.getElementById('scoreBoard');
+  //  console.log(keys);
    for (let i =0; i< keys.length; i++){
        let k = keys[i];
        let initials = scores[k].initials;
        let score = scores[k].score;
-       console.log(initials, score);
-      //  ScoreBoard.classList.add('scoreList');
-       ScoreBoard.innerHTML += `
-          <li>${initials + ': ' + score}</li>
-        `
+      //  console.log(initials, score);
+      var li = document.createElement('li');
+      li.classList.add('scoreList');
+
+      $(olList).append(li);
+       var scoreArr = $('ol').find('li');
+       var count = $("ol").find("li").length;
+
+       li.innerText = initials + ': ' + score;
    }
 }
 
