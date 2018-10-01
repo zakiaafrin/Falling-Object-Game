@@ -61,7 +61,7 @@ ref.on('value', gotData, errData);
 function gotData(data) {
 
   let scoreLists = document.querySelectorAll('.scoreList');
-  for (let i =0; i< scoreLists.length; i++){
+  for (let i = 0; i < scoreLists.length; i++) {
     scoreLists[i].remove();
   }
 
@@ -71,27 +71,27 @@ function gotData(data) {
   const keys = Object.keys(scores);
   const olList = document.getElementById('scoreBoard');
   //  console.log(keys);
-   for (let i =0; i< keys.length; i++){
-       let k = keys[i];
-       let initials = scores[k].initials;
-       let score = scores[k].score;
-      //  console.log(initials, score);
-      var li = document.createElement('li');
-      li.classList.add('scoreList');
 
-      $(olList).append(li);
-       var scoreArr = $('ol').find('li');
-       var count = $("ol").find("li").length;
+  for (let i = 0; i < keys.length; i++) {
+    let k = keys[i];
+    let initials = scores[k].initials;
+    let score = scores[k].score;
+    //  console.log(initials, score);
+    var li = document.createElement('li');
+    li.classList.add('scoreList');
 
-       li.innerText = initials + ': ' + score;
-   }
+    $(olList).append(li);
+    var scoreArr = $('ol').find('li');
+    var count = $("ol").find("li").length;
+
+    li.innerText = initials + ': ' + score;
+  }
 }
 
 function errData(err) {
   console.log('There is an error!!!');
   console.log(err);
 }
-
 
 function submitScore() {
   var data = {
