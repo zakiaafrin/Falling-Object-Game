@@ -42,6 +42,7 @@ body {
   user-select: none;
   width: 100%;
   text-align: center;
+  position: fixed
 }
 
 .scoreBox {
@@ -81,7 +82,7 @@ body {
   border-radius: 20%;
   background-color: #ff6969ba;
   width: 8%;
-  margin-left: 40%;
+  margin-left: 46%;
   text-align: center;
   font-family: arial;
   color: #0f0205;
